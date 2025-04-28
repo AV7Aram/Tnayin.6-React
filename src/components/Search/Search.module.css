@@ -1,0 +1,37 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.headerSearch{
+    width: 410px;
+    height: 42px;
+    position: absolute;
+    left: 38%;
+    top: 9px;
+    margin: 0 0 0 -205px;
+    background: #fff;
+    border-radius: 03px;
+}
+
+.headerSearch input[type="search"] {
+    width: 100%;
+    padding: 10px;
+    border: 0px;
+    border-radius: 03px;
+}
+
+.headerSearch input[type="search"]:focus {
+    outline: none;
+}
+
+.headerSearch input{
+    font-size: 16px;
+}
+
+.bi-search {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,123 @@
+.containerFluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer {
+    color: #FFF;
+    background: #1d1d1d;
+}
+
+.container{
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.footerMenu {
+    text-align: center;
+    padding: 20px 0px;
+    border-bottom: solid 1px #666;
+    li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 10px;
+        a {
+            display: block;
+            padding: 5px 10px;
+            color: #FFF;
+            opacity: 0.6;
+            &:hover {
+                color: #FFF;
+                opacity: 1;
+                transition: ease all 0.4s;
+            }
+        }
+    }
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.colLg3{
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    background: #1d1d1d;
+    width: 25%;
+    float: left; 
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.footerBenefits {
+    color: #999;
+    position: relative;
+    padding: 0 0 0 65px;
+    margin: 30px 0 0;
+    font-size: 13px;
+    i{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 30px;
+        color: white;
+
+    }
+    span {
+        color: #FFF;
+        display: block;
+        font-size: 14px;
+    }
+    a {
+        color: #F1AB3D;
+        text-decoration: none;
+    }
+}
+
+
+.colԼg12 {
+    width: 100%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.copyright {
+    padding: 40px 0;
+    font-size: 14px;
+    line-height: 32px;
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    .paymentMethods {
+        float: right;
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
