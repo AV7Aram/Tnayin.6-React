@@ -6,14 +6,20 @@ export const Products = ({ products: initialProducts }) => {
     const [products, setProducts] = useState(
         initialProducts.map(product => ({
             ...product,
-            count: product.count || 1
+            count: product.count || 1,
+            initPrice: product.price, 
+            price: product.price 
         }))
     );
 
     const handleIncrement = (id) => {
         setProducts(products.map(product =>
             product.id === id
-                ? { ...product, count: product.count + 1, price: product.price * 2 }
+                ? { 
+                    ...product, 
+                    count: product.count + 1, 
+                    price: product.initPrice * (product.count + 1) 
+                }
                 : product
         ));
     };
@@ -21,7 +27,11 @@ export const Products = ({ products: initialProducts }) => {
     const handleDecrement = (id) => {
         setProducts(products.map(product =>
             product.id === id && product.count > 1
-                ? { ...product, count: product.count - 1, price: product.price / 2 }
+                ? { 
+                    ...product, 
+                    count: product.count - 1, 
+                    price: product.initPrice * (product.count - 1)
+                }
                 : product
         ));
     };
@@ -36,7 +46,7 @@ export const Products = ({ products: initialProducts }) => {
                             <div className={style.cardDescription}>
                                 <p className={style.productTitle}>{product.title}</p>
                                 <p className={style.productDescription}>{`Description: ${product.description}`}</p>
-                                <span className={style.productPrice}>{`Price: ${product.price}$`}</span>
+                                <span className={style.productPrice}>{`Price: ${product.price.toFixed(2)}$`}</span>
                                 <ProductsCount
                                     count={product.count}
                                     onIncrement={() => handleIncrement(product.id)}
